@@ -1,13 +1,9 @@
-FROM ubuntu:18.04
+FROM python:3.8-alpine
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt install python3 -y && \
-    apt install python3-pip -y && \
-    pip3 install flask flask_cors
+RUN pip install flask flask_cors
 #install youtubedl
 RUN wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
-RUN rm -rf /var/lib/apt/lists/*
+RUN chmod +x /usr/local/bin/youtube-dl
 
 #back
 COPY main.py /back/main.py
