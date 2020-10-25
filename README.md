@@ -1,3 +1,6 @@
+# React tutorial
+https://www.taniarascia.com/getting-started-with-react/
+
 # youtube-downloader
 #install tool to download youtube
 sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
@@ -7,6 +10,7 @@ youtube-dl --all-subs "https://www.youtube.com/watch?v=KYBok-XGsKM"
 
 youtube-dl "https://www.youtube.com/watch?v=aVqtBaU2X6M" --merge-output-format mkv
 
+youtube-dl "https://www.youtube.com/watch?v=Hi7Rx3En7-k" --merge-output-format mkv
 ffmpeg -i ma-video.webm -c copy ma-video.mp4
 
 # only sound
