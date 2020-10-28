@@ -9,7 +9,9 @@ RUN chmod +x /usr/local/bin/youtube-dl
 COPY main.py /back/main.py
 
 #janitord
+COPY janitord.py /back/janitord.py
 
 EXPOSE 5000
-RUN echo "python3 -u /back/main.py" > start.sh
+RUN echo "python -u /back/janitord.py /tmp case 300 &" > start.sh && \
+    echo "python -u /back/main.py" >> start.sh
 CMD ["sh", "start.sh"]
